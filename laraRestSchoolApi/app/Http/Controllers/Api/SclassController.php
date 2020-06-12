@@ -34,7 +34,7 @@ class SclassController extends Controller
 
         $data = array();
         $data['class_name'] = $request->class_name;
-        $insert = DB::table(sclasses)->insert($data);
+        $insert = DB::table('sclasses')->insert($data);
 
         return response('Inserted Succesfull');
 
@@ -66,7 +66,7 @@ class SclassController extends Controller
     {
         $data = array();
         $data['class_name'] = $request->class_name;
-        $insert = DB::table(sclasses)->where('id',$id)->update($data);
+        $insert = DB::table('sclasses')->where('id',$id)->update($data);
 
         return response('Updated Succesfull');
     }
